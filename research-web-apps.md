@@ -98,7 +98,16 @@ Think of this as *infrastructure as code*
 It describes the actions to build a Docker image from a pre-existing template
 
 ```
-Example Dockerfile
+FROM rocker/shiny-verse
+
+EXPOSE 3838
+
+COPY /SpheroidAnalyseR/ /srv/shiny-server/
+
+RUN install2.r --error \
+    ggthemes \
+    gridExtra \
+    readxl \
 ```
 
 ## Building the container locally
