@@ -31,6 +31,7 @@ date:
     * Computational, training and teaching consultancy
     * Code optimisation
     * Support and guidance on Cloud
+    * GPU-accelerated Deep learning and AI support
 
 ## Questions?
 
@@ -63,7 +64,7 @@ If you have any questions, pop then in the chat as we go and we'll deal with the
 * Build a container of the app and it's framework
 * Test locally
 * Configure Azure Container Registry (ACR) and Azure App Service (AAS)
-* Deploy container to ACR
+* Deploy local container to ACR
 * Deploy from ACR to AAS
 
 # Different types of App
@@ -112,14 +113,14 @@ RUN install2.r --error \
 
 ## Building the container locally
 
-`docker build -t myappname .`
+`docker build -t myimage .`
 
 ## Run it locally to test
 
 We create a **container** from the **image**
 
 `docker run --name mycontainer \
---rm -d -p 3838:3838 my_app`
+--rm -d -p 3838:3838 myimage`
 
 Check it works and then stop it.
 
@@ -127,7 +128,7 @@ Check it works and then stop it.
 
 ## Retag the container
 
-`docker tag my_app myreg.azurecr.io/my_app`
+`docker tag myimage myreg.azurecr.io/my_app`
 
 ## Azure CLI
 
@@ -137,7 +138,7 @@ Check it works and then stop it.
 * Create the App from the ACR image
 * Over to Alex for a demo
 
-# Recapping on what Alex did
+# The finished app
 
 
 ## Here it is!
