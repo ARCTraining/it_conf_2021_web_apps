@@ -128,7 +128,7 @@ Check it works and then stop it.
 
 ## Retag the container
 
-`docker tag myimage myreg.azurecr.io/my_app`
+`docker tag myimage myreg.azurecr.io/myimage`
 
 ## Azure CLI
 
